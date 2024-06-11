@@ -139,26 +139,39 @@ header {
 }
 
 
-.produtos {
+#products {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.produto {
-    margin: 80px 99px 40px 99px;
+.product{
+    margin: 30px 50px;
 }
 
-.produto .nome-produto {
+.product .product-name {
     font-weight: 600;
     font-size: 24px;
 }
 
-.produto span {
+.product span {
     font-size: 16px;
     color:#898989;
+}
+
+.product .desconto {
+    text-decoration: line-through;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.product .price {
+    font-size: 20px;
 }
 
 .backgraund-grey {
     padding: 10px;
     background-color:#F4F5F7;
-    max-width: 285px
+    max-width: 285px;
+    position: sticky;
 }
