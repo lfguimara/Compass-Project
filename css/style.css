@@ -175,3 +175,29 @@ header {
     max-width: 285px;
     position: sticky;
 }
+
+.hidden {
+    display: none!important;
+}
+
+/* buttons */
+
+.container-button {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #F9F1E7; 
+    padding: 20px 30px;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.active {
+    background-color: #B88E2F;
+    color: #FFFFFF;
+}
