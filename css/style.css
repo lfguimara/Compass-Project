@@ -201,3 +201,15 @@ header {
     background-color: #B88E2F;
     color: #FFFFFF;
 }
+
+/* qualifications */
+
+.qualifications {
+    background-color:#FAF3EA;
+    text-align: center;
+}
+
+.qualifications img {
+    display: inline-block;
+    padding: 80px;
+}
