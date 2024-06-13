@@ -96,6 +96,10 @@ header {
     position: relative;
 }
 
+#filter-money {
+    padding-top: 10px;
+}
+
 .filter-left {
     display: flex;
 }
@@ -104,7 +108,7 @@ header {
     font-size: 20px;
 }
 
-.filter-left img {
+.filter-image {
     cursor: pointer;
     padding-right: 10px;
 }
@@ -239,7 +243,6 @@ header {
     justify-content: center;
     margin: 70px;
     padding-bottom: 50px;
-    
 }
 
 .btn {
