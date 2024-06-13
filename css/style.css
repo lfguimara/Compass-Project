@@ -257,15 +257,32 @@ header {
 
 /* qualifications */
 
-.qualifications {
-    background-color:#FAF3EA;
-    text-align: center;
+.qualifications{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.qualifications img {
-    display: inline-block;
+.qualification {
     padding: 150px;
+    background-color:#FAF3EA;
+    display: flex;
+    justify-content: space-between;
+    
 }
+
+.qualification img {
+    padding-left: 30px;
+}
+
+.qualification-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    justify-content: space-between;
+    
+}
+
 
 /* footer */
 
