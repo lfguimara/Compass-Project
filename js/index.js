@@ -51,5 +51,58 @@ document.getElementById('filter-money').addEventListener('click', sortProducts);
 //Filter-right
 
 
+//button
+
+document.querySelectorAll('.btn-golden').forEach(function (button) {
+    button.addEventListener('click', function () {
+        // Remove a classe 'active' de todos os botões
+        document.querySelectorAll('.btn-golden').forEach(function (btn) {
+            btn.classList.remove('active');
+        });
+
+        // Adiciona a classe 'active' ao botão clicado
+        this.classList.add('active');
+    });
+});
+
+
+
+
+document.querySelectorAll('.btn-golden').forEach(function (button) {
+    button.addEventListener('click', function () {
+        if (!this.classList.contains('next')) {
+            // Remove a classe 'active' de todos os botões
+            document.querySelectorAll('.btn-golden').forEach(function (btn) {
+                btn.classList.remove('active');
+            });
+
+            // Adiciona a classe 'active' ao botão clicado
+            this.classList.add('active');
+        }
+    });
+});
+
+document.querySelector('.next').addEventListener('click', function () {
+
+    let activeButton = document.querySelector('.btn-golden.active');
+
+    let buttons = document.querySelectorAll('.btn-golden:not(.next)');
+
+
+    let currentIndex = Array.from(buttons).indexOf(activeButton);
+
+    let nextIndex = (currentIndex + 1) % buttons.length;
+
+
+    activeButton.classList.remove('active');
+
+    buttons[nextIndex].classList.add('active');
+});
+
+
+
+
+
+
 
 
