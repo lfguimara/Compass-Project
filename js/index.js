@@ -60,30 +60,32 @@ document.getElementById('filter-money').addEventListener('click', sortProducts);
 
 document.addEventListener('DOMContentLoaded', function() {
     const productToggle = document.getElementById('product-toggle');
-    const products = document.querySelectorAll('.product');
+    const imageContainer = document.getElementById('image-container');
 
-    productToggle.addEventListener('change', function () {
-        const selectedValue = productToggle.value;
+    // Função para mostrar as imagens com base na seleção do select
+    function showImages() {
+        // Limpar o conteúdo atual do container de imagens
+        imageContainer.innerHTML = '';
 
-        products.forEach(function (product) {
-            const quantity = product.getAttribute('data-quantity');
-            if (quantity === selectedValue) {
-                product.classList.remove('hidden');
-            } else {
-                product.classList.add('hidden');
-            }
-        });
-    });
+        // Obter o valor selecionado
+        const quantity = parseInt(productToggle.value, 10);
 
-    // Initialize visibility based on the default selected value
-    const selectedValue = productToggle.value;
-    products.forEach(function (product) {
-        const quantity = product.getAttribute('data-quantity');
-        if (quantity !== selectedValue) {
-            product.classList.add('hidden');
+        // Criar e adicionar as imagens ao container
+        for (let i = 1; i <= quantity; i++) {
+            const image = document.createElement('div');
+            image.classList.add('image');
+            image.textContent = i; // Exemplo: Usando texto para identificar cada imagem
+            imageContainer.appendChild(image);
         }
-    });
+    }
+
+    // Adicionar um listener de evento para mudanças no select
+    productToggle.addEventListener('change', showImages);
+
+    // Chamada inicial para exibir as imagens com base no valor inicial do select
+    showImages();
 });
+
 
 
 //button
