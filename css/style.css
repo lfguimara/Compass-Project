@@ -59,7 +59,7 @@ nav ul li:hover {
 /* Header */
 
 header {
-    background-image: url(img/backgraund-shop.png);
+    background-image: url(/img/backgraund-shop.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -87,6 +87,29 @@ header {
 
 /* Main */
 
+
+.select {
+    appearance: none; 
+            -webkit-appearance: none; 
+            -moz-appearance: none; 
+            padding: 8px; 
+            font-size: 16px; 
+            border: 1px solid #ccc; 
+            background-color: #fff; 
+            cursor: pointer; 
+            border-radius: 4px; 
+            outline: none; 
+}
+
+.select:focus {
+    box-shadow: 0 0 4px #3399ff;
+}
+
+.select-right {
+    padding: 20px;
+    margin-left: 10px;
+}
+
 .filter {
     background-color: #F9F1E7;
     padding: 50px;
@@ -109,7 +132,6 @@ header {
 }
 
 .filter-image {
-    cursor: pointer;
     padding-right: 10px;
 }
 
@@ -142,6 +164,34 @@ header {
     margin-bottom: 10px;
     cursor: pointer;
 }
+/* product-commun*/
+
+.product-commun{
+    margin: 30px 50px;
+}
+
+.product-commun .product-name {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.product-commun span {
+    font-size: 16px;
+    color:#898989;
+}
+
+.product-commun .desconto {
+    text-decoration: line-through;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.product-commun .price {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+/* product*/
 
 
 #products {
@@ -187,7 +237,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     position: absolute;
     width: 100%;
     height: 100%;
@@ -223,11 +272,10 @@ header {
     opacity: 0.8;
     color: #ffffff;
     padding-right: 15px;
-
 }
 
 .hidden {
-    display: none!important;
+    display: none;
 }
 
 .product-text {
@@ -337,17 +385,22 @@ header {
 }
 
 .footer-input{
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 50px;
-    text-decoration: underline;
     border: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid black;
 }
 
 .footer-subscribe {
+    text-decoration: none;
     font-size: 14px;
     color: #000;
+    border-bottom: 1px solid black;
     font-weight: 500;
 }
 
 
 
+
+/* KEKW */
