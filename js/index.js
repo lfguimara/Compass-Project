@@ -58,33 +58,7 @@ document.getElementById('filter-money').addEventListener('click', sortProducts);
 
 //Filter-right
 
-document.addEventListener('DOMContentLoaded', function() {
-    const productToggle = document.getElementById('product-toggle');
-    const imageContainer = document.getElementById('image-container');
 
-    // Função para mostrar as imagens com base na seleção do select
-    function showImages() {
-        // Limpar o conteúdo atual do container de imagens
-        imageContainer.innerHTML = '';
-
-        // Obter o valor selecionado
-        const quantity = parseInt(productToggle.value, 10);
-
-        // Criar e adicionar as imagens ao container
-        for (let i = 1; i <= quantity; i++) {
-            const image = document.createElement('div');
-            image.classList.add('image');
-            image.textContent = i; // Exemplo: Usando texto para identificar cada imagem
-            imageContainer.appendChild(image);
-        }
-    }
-
-    // Adicionar um listener de evento para mudanças no select
-    productToggle.addEventListener('change', showImages);
-
-    // Chamada inicial para exibir as imagens com base no valor inicial do select
-    showImages();
-});
 
 
 
@@ -103,11 +77,32 @@ document.querySelectorAll('.btn-golden').forEach(function (button) {
 });
 
 
+//Validação do email
 
+function validarEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
 
+function subscribe(event) {
+    event.preventDefault(); // Evita que o link SUBSCRIBE recarregue a página
 
+    var emailInput = document.getElementById('email');
+    var email = emailInput.value.trim();
 
+    if (!validarEmail(email)) {
+        // Aplica a classe de CSS para borda vermelha
+        emailInput.classList.add('invalid-email');
+        return; // Stop further execution
+    }
 
+    // Remove a classe de CSS para borda vermelha se o email for válido
+    emailInput.classList.remove('invalid-email');
 
-
-
+    // Code to subscribe the user goes here
+    // For example, you might send the email to your server or perform some other action
+    alert('Subscribed successfully!');
+    
+    // Optionally, reset the email input after successful subscription
+    emailInput.value = '';
+}

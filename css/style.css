@@ -400,6 +400,10 @@ header {
     font-weight: 500;
 }
 
+.invalid-email {
+    border: 1px solid red;
+    border-radius: 3px;
+}
 
 
 
